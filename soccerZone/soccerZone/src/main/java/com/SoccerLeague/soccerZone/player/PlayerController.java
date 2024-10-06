@@ -38,7 +38,7 @@ public class PlayerController {
         @RequestParam(required = false) String position,
         @RequestParam(required = false) String nation){
         
-            if (team != NULL && position != null){
+            if (team != null && position != null){
                 return playerService.getPlayersByTeamAndPosition(team, position);
             } else if (team != null){
                 return playerService.getPlayersFromTeam(team);
